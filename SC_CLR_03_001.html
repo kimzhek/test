@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>eGovCp</title>
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+    <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+    <script type='text/javascript' src="js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+</head>
+
+<body>
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <header id="header">
+            <div class="inner">
+                <h1 class="logo"><a href="#"><img src="images/logo.png" alt="eGovCp"></a></h1>
+                <div class="header-top-groupt">
+                    <a class="menu-ctrl btn btn-primary" href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                    <div class="header-user dropdown">
+                        <a href="#" id="btn-my" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <span class="name">홍길동</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right" role="btn-my" aria-labelledby="btn-my">
+                            <li><a href="#"><span class="ico ico1"></span>개인정보 수정</a></li>
+                            <li><a href="#"><span class="ico ico2"></span>나의 문의내역</a></li>
+                            <li><a href="#"><span class="ico ico3"></span>문의하기</a></li>
+                            <li><a href="#"><span class="ico ico4"></span>로그아웃</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="container">
+            <!-- left Cnt -->
+            <div class="leftCnt">
+                <ul class="gnb-menu">
+                    <li><a href="" data-toggle="tooltip" data-placement="right" title="대시보드"><i class="fa fa-th-large"></i><strong>대시보드</strong></a></li>
+                    <li><a href="" data-toggle="tooltip" data-placement="right" title="API 관리"><i class="fa fa-archive"></i><strong>API 관리</strong></a></li>
+                    <li><a href="" data-toggle="tooltip" data-placement="right" title="API 배포 관리"><i class="fa fa-book"></i><strong>API 배포 관리</strong></a></li>
+                    <li>
+                        <a href="javascript:void(0);" class="on" data-toggle="tooltip" data-placement="right" title="API 현황 관리">
+                            <i class="fa fa-desktop"></i>
+                            <strong>API 현황 관리</strong>
+                            <span class="fa fa-chevron-down"></span>
+                        </a>
+                        <ul class="dept2">
+                            <li><a href="#">프로젝트 별 API 호출 현황</a></li>
+                            <li><a href="#">프로젝트 별 응답시간 현황</a></li>
+                            <li><a href="#" class="on">API 별 호출 현황</a></li>
+                            <li><a href="#">API 별 응답 코드 현황</a></li>
+                            <li><a href="#">API 별 요청/응답 Packet Size 현황</a></li>
+                            <li><a href="#">정책 적용 현황</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" data-toggle="tooltip" data-placement="right" title="API 사용 신청"><i class="fa fa-sitemap"></i><strong>API 사용 신청</strong></a></li>
+                </ul>
+            </div>
+            <!-- //left Cnt -->
+
+            <!-- right Cnt -->
+            <div class="rightCnt">
+                <!-- titWrap -->
+                <div class="titWrap">
+                    <h2 class="ctit">API 배포관리</h2>
+                    <div class="btnArea">
+                        <button type="button" name="button" class="btn-list" data-placement="bottom" data-toggle="tooltip" data-original-title="목록보기">
+                            <i class="fa fa-th-list" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" name="button" class="btn-refresh" data-placement="bottom" data-toggle="tooltip" data-original-title="새로고침">
+                            <i class="fa fa-refresh" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- //titWrap -->
+
+                <!-- content -->
+                <div class="content">
+
+                    <div class="stitWrap">
+                        <h3 class="stit">API 배포 내역 <span class="badge">10</span></h3>
+                    </div>
+
+                    <div class="search-box">
+                        <div class="inner">
+                            <select>
+                                <option value="0">전체</option>
+                                <option value="1">API 이름</option>
+                                <option value="2">API ID</option>
+                                <option value="3">프로젝트명</option>
+                            </select>
+                            <input type="text" class="search-input" placeholder="검색어를 입력해 주세요.">
+                            <button type="button" name="button" class="btn search-btn btn-primary" title="검색"><i class="fa fa-search" aria-hidden="true"></i>검색</button>
+                        
+                            <div class="search-section">
+                                <div class="custom-radio">
+                                    <input type="radio" id="jb-radio-1" name="radioGroup01" checked>
+                                    <label for="jb-radio-1">전체</label>
+                                </div>
+                                <div class="custom-radio">
+                                    <input type="radio" id="jb-radio-2" name="radioGroup01">
+                                    <label for="jb-radio-2">활성</label>
+                                </div>
+                                <div class="custom-radio">
+                                    <input type="radio" id="jb-radio-3" name="radioGroup01">
+                                    <label for="jb-radio-3">비활성</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="api-box">
+                        <li class="api-content">
+                            <div class="api-initial"><span class="badge-primary">A</span></div>
+                            <div class="api-cont">
+                                <strong class="tit">API 이름</strong>
+                                <div class="txt-wrap">
+                                    <div class="txt-wrap-left">
+                                        <span><strong>API 아이디 :</strong> <em>service_id</em></span>
+                                        <span><strong>호출 URL :</strong> <em>/api/zzz-a/v1</em></span>
+                                        <span><strong>API 배포 :</strong> <em>활성</em></span>
+                                    </div>
+                                    <div class="txt-wrap-right"><span>2018-09-10 00:00</span> <span>홍길동</span></div>
+                                </div>
+                                <div class="dropdown-box">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="#">API 배포 관리</a></li>
+                                        <li><a href="#">활성 상태로 변경</a></li>
+                                        <li><a href="#">비활성 상태로 변경</a></li>
+                                        <li><a href="#">수정</a></li>
+                                        <li><a href="#">삭제</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="api-content">
+                            <div class="api-initial"><span class="badge-primary">A</span></div>
+                            <div class="api-cont">
+                                <strong class="tit">API 이름</strong>
+                                <div class="txt-wrap">
+                                    <div class="txt-wrap-left">
+                                        <span><strong>API 아이디 :</strong> <em>service_id</em></span>
+                                        <span><strong>호출 URL :</strong> <em>/api/zzz-a/v1</em></span>
+                                        <span><strong>API 배포 :</strong> <em>활성</em></span>
+                                    </div>
+                                    <div class="txt-wrap-right"><span>2018-09-10 00:00</span> <span>홍길동</span></div>
+                                </div>
+                                <div class="dropdown-box">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="#">API 배포 관리</a></li>
+                                        <li><a href="#">활성 상태로 변경</a></li>
+                                        <li><a href="#">비활성 상태로 변경</a></li>
+                                        <li><a href="#">수정</a></li>
+                                        <li><a href="#">삭제</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="api-content">
+                            <div class="api-initial"><span class="badge-primary">A</span></div>
+                            <div class="api-cont">
+                                <strong class="tit">API 이름</strong>
+                                <div class="txt-wrap">
+                                    <div class="txt-wrap-left">
+                                        <span><strong>API 아이디 :</strong> <em>service_id</em></span>
+                                        <span><strong>호출 URL :</strong> <em>/api/zzz-a/v1</em></span>
+                                        <span><strong>API 배포 :</strong> <em>활성</em></span>
+                                    </div>
+                                    <div class="txt-wrap-right"><span>2018-09-10 00:00</span> <span>홍길동</span></div>
+                                </div>
+                                <div class="dropdown-box">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="#">API 배포 관리</a></li>
+                                        <li><a href="#">활성 상태로 변경</a></li>
+                                        <li><a href="#">비활성 상태로 변경</a></li>
+                                        <li><a href="#">수정</a></li>
+                                        <li><a href="#">삭제</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="pagination-box">
+                        <button type="button" class="btn btn-white"><i class="fa fa-angle-double-left"></i></button>
+                        <button type="button" class="btn btn-white"><i class="fa fa-chevron-left"></i></button>
+                        <button class="btn btn-white">1</button>
+                        <button class="btn btn-white  active">2</button>
+                        <button class="btn btn-white">3</button>
+                        <button class="btn btn-white">4</button>
+                        <button type="button" class="btn btn-white"><i class="fa fa-chevron-right"></i> </button>
+                        <button type="button" class="btn btn-white"><i class="fa fa-angle-double-right"></i></button>
+                    </div>
+
+                </div>
+                <!-- //content -->
+            </div>
+            <!-- //right Cnt -->
+        </div>
+        <!-- //container -->
+    </div>
+    <!-- //wrap -->
+</body>
+</html>

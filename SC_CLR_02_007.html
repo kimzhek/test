@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>eGovCp</title>
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+    <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+    <script type='text/javascript' src="js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+</head>
+
+<body>
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <header id="header">
+            <div class="inner">
+                <h1 class="logo"><a href="#"><img src="images/logo.png" alt="eGovCp"></a></h1>
+                <div class="header-top-groupt">
+                    <a class="menu-ctrl btn btn-primary" href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                    <div class="header-user dropdown">
+                        <a href="#" id="btn-my" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <span class="name">홍길동</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right" role="btn-my" aria-labelledby="btn-my">
+                            <li><a href="#"><span class="ico ico1"></span>개인정보 수정</a></li>
+                            <li><a href="#"><span class="ico ico2"></span>나의 문의내역</a></li>
+                            <li><a href="#"><span class="ico ico3"></span>문의하기</a></li>
+                            <li><a href="#"><span class="ico ico4"></span>로그아웃</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="container">
+            <!-- left Cnt -->
+            <div class="leftCnt">
+                <ul class="gnb-menu">
+                    <li><a href="" data-toggle="tooltip" data-placement="right" title="대시보드"><i class="fa fa-th-large"></i><strong>대시보드</strong></a></li>
+                    <li><a href="" data-toggle="tooltip" data-placement="right" title="API 관리"><i class="fa fa-archive"></i><strong>API 관리</strong></a></li>
+                    <li><a href="" data-toggle="tooltip" data-placement="right" title="API 배포 관리"><i class="fa fa-book"></i><strong>API 배포 관리</strong></a></li>
+                    <li>
+                        <a href="javascript:void(0);" class="on" data-toggle="tooltip" data-placement="right" title="API 현황 관리">
+                            <i class="fa fa-desktop"></i>
+                            <strong>API 현황 관리</strong>
+                            <span class="fa fa-chevron-down"></span>
+                        </a>
+                        <ul class="dept2">
+                            <li><a href="#">프로젝트 별 API 호출 현황</a></li>
+                            <li><a href="#">프로젝트 별 응답시간 현황</a></li>
+                            <li><a href="#" class="on">API 별 호출 현황</a></li>
+                            <li><a href="#">API 별 응답 코드 현황</a></li>
+                            <li><a href="#">API 별 요청/응답 Packet Size 현황</a></li>
+                            <li><a href="#">정책 적용 현황</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" data-toggle="tooltip" data-placement="right" title="API 사용 신청"><i class="fa fa-sitemap"></i><strong>API 사용 신청</strong></a></li>
+                </ul>
+            </div>
+            <!-- //left Cnt -->
+
+            <!-- right Cnt -->
+            <div class="rightCnt">
+                <!-- titWrap -->
+                <div class="titWrap">
+                    <h2 class="ctit">API 관리</h2>
+                    <div class="btnArea">
+                        <button type="button" name="button" class="btn-list" data-placement="bottom" data-toggle="tooltip" data-original-title="목록보기">
+                            <i class="fa fa-th-list" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" name="button" class="btn-refresh" data-placement="bottom" data-toggle="tooltip" data-original-title="새로고침">
+                            <i class="fa fa-refresh" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- //titWrap -->
+
+                <!-- content -->
+                <div class="content">
+
+                    <div class="api-box">
+                        <div class="api-content">
+                            <div class="api-initial"><span class="badge-primary">A</span></div>
+                            <div class="api-cont">
+                                <strong class="tit">날씨정보 조회</strong>
+                                <div class="txt-wrap">
+                                    <div class="txt-wrap-left">
+                                        <span><strong>API 아이디 :</strong> <em>service_id</em></span>
+                                        <span><strong>API 등록 구분 :</strong> <em>프로젝트 내부 API</em></span>
+                                         <span><strong>API 배포 :</strong> <em>배포</em></span>
+                                    </div>
+                                    <div class="txt-wrap-right"><span>2018-09-10 00:00</span> <span>홍길동</span></div>
+                                </div>
+                                <div class="dropdown-box">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="#">API 배포</a></li>
+                                        <li><a href="#">API 배포 수정</a></li>
+                                        <li><a href="#">삭제</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-detail">
+                            <p class="txt">설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이
+                                출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이
+                                출력됩니다.설명이
+                                출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이
+                                출력됩니다.설명이
+                                출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이
+                                출력됩니다.설명이
+                                출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이
+                                출력됩니다.설명이
+                                출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이
+                                출력됩니다.설명이
+                                출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이
+                                출력됩니다.설명이
+                                출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이
+                                출력됩니다.설명이
+                                출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이
+                                출력됩니다.설명이
+                                출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이
+                                출력됩니다.설명이
+                                출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이
+                                출력됩니다.설명이
+                                출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이
+                                출력됩니다.설명이
+                                출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.설명이 출력됩니다.</p>
+                            <a href="#" class="more">더보기</a>
+                        </div>
+                    </div>
+
+                    <!-- tab -->
+                    <div class="tab-wrap">
+                        <ul class="nav nav-tabs">
+                            <li><a href="#">명세 조회</a></li>
+                            <li><a href="#">배포 조회</a></li>
+                            <li><a href="#">정책 조회</a></li>
+                            <li class="active"><a href="#">APP 연결 현황 조회 및 관리</a></li>
+                        </ul>
+                    </div>
+                    <!-- //tab -->
+
+                    <ul class="api-list">
+                        <li>
+                            <div class="list-inner">
+                                <div class="list-head">
+                                    <div class="initial"><span class="badge-primary">A</span></div>
+                                    <strong class="tit">PetStore-master</strong>
+                                </div>
+                                <div class="dropdown-box">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="#">상세 정보</a></li>
+                                    </ul>
+                                </div>
+                                <p>[프로젝트 ID] 기상청 프로젝트 [프로젝트 ID] 기상청 프로젝트</p>
+                                <ul class="info">
+                                    <li><strong>등록자 :</strong> <em>홍길동</em></li>
+                                    <li><strong>토큰 발급 일시 :</strong> <em>2018-10-05 00:00</em></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list-inner">
+                                <div class="list-head">
+                                    <div class="initial"><span class="badge-primary">A</span></div>
+                                    <strong class="tit">App name</strong>
+                                </div>
+                                <div class="dropdown-box">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="#">상세 정보</a></li>
+                                    </ul>
+                                </div>
+                                <p>[프로젝트 ID] 기상청 프로젝트 [프로젝트 ID] 기상청 프로젝트</p>
+                                <ul class="info">
+                                    <li><strong>등록자 :</strong> <em>홍길동</em></li>
+                                    <li><strong>토큰 발급 일시 :</strong> <em>2018-10-05 00:00</em></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list-inner">
+                                <div class="list-head">
+                                    <div class="initial"><span class="badge-primary">A</span></div>
+                                    <strong class="tit">PetStore-master</strong>
+                                </div>
+                                <div class="dropdown-box">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="#">상세 정보</a></li>
+                                    </ul>
+                                </div>
+                                <p>[프로젝트 ID] 기상청 프로젝트 [프로젝트 ID] 기상청 프로젝트</p>
+                                <ul class="info">
+                                    <li><strong>등록자 :</strong> <em>홍길동</em></li>
+                                    <li><strong>토큰 발급 일시 :</strong> <em>2018-10-05 00:00</em></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list-inner">
+                                <div class="list-head">
+                                    <div class="initial"><span class="badge-primary">A</span></div>
+                                    <strong class="tit">PetStore-master</strong>
+                                </div>
+                                <div class="dropdown-box">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="#">상세 정보</a></li>
+                                    </ul>
+                                </div>
+                                <p>[프로젝트 ID] 기상청 프로젝트 [프로젝트 ID] 기상청 프로젝트</p>
+                                <ul class="info">
+                                    <li><strong>등록자 :</strong> <em>홍길동</em></li>
+                                    <li><strong>토큰 발급 일시 :</strong> <em>2018-10-05 00:00</em></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list-inner">
+                                <div class="list-head">
+                                    <div class="initial"><span class="badge-primary">A</span></div>
+                                    <strong class="tit">PetStore-master</strong>
+                                </div>
+                                <div class="dropdown-box">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="#">상세 정보</a></li>
+                                    </ul>
+                                </div>
+                                <p>[프로젝트 ID] 기상청 프로젝트 [프로젝트 ID] 기상청 프로젝트</p>
+                                <ul class="info">
+                                    <li><strong>등록자 :</strong> <em>홍길동</em></li>
+                                    <li><strong>토큰 발급 일시 :</strong> <em>2018-10-05 00:00</em></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list-inner">
+                                <div class="list-head">
+                                    <div class="initial"><span class="badge-primary">A</span></div>
+                                    <strong class="tit">PetStore-master</strong>
+                                </div>
+                                <div class="dropdown-box">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="#">상세 정보</a></li>
+                                    </ul>
+                                </div>
+                                <p>[프로젝트 ID] 기상청 프로젝트 [프로젝트 ID] 기상청 프로젝트</p>
+                                <ul class="info">
+                                    <li><strong>등록자 :</strong> <em>홍길동</em></li>
+                                    <li><strong>토큰 발급 일시 :</strong> <em>2018-10-05 00:00</em></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list-inner">
+                                <div class="list-head">
+                                    <div class="initial"><span class="badge-primary">A</span></div>
+                                    <strong class="tit">PetStore-master</strong>
+                                </div>
+                                <div class="dropdown-box">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="#">상세 정보</a></li>
+                                    </ul>
+                                </div>
+                                <p>[프로젝트 ID] 기상청 프로젝트 [프로젝트 ID] 기상청 프로젝트</p>
+                                <ul class="info">
+                                    <li><strong>등록자 :</strong> <em>홍길동</em></li>
+                                    <li><strong>토큰 발급 일시 :</strong> <em>2018-10-05 00:00</em></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list-inner">
+                                <div class="list-head">
+                                    <div class="initial"><span class="badge-primary">A</span></div>
+                                    <strong class="tit">PetStore-master</strong>
+                                </div>
+                                <div class="dropdown-box">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="#">상세 정보</a></li>
+                                    </ul>
+                                </div>
+                                <p>[프로젝트 ID] 기상청 프로젝트 [프로젝트 ID] 기상청 프로젝트</p>
+                                <ul class="info">
+                                    <li><strong>등록자 :</strong> <em>홍길동</em></li>
+                                    <li><strong>토큰 발급 일시 :</strong> <em>2018-10-05 00:00</em></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list-inner">
+                                <div class="list-head">
+                                    <div class="initial"><span class="badge-primary">A</span></div>
+                                    <strong class="tit">PetStore-master</strong>
+                                </div>
+                                <div class="dropdown-box">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="#">상세 정보</a></li>
+                                    </ul>
+                                </div>
+                                <p>[프로젝트 ID] 기상청 프로젝트 [프로젝트 ID] 기상청 프로젝트</p>
+                                <ul class="info">
+                                    <li><strong>등록자 :</strong> <em>홍길동</em></li>
+                                    <li><strong>토큰 발급 일시 :</strong> <em>2018-10-05 00:00</em></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list-inner">
+                                <div class="list-head">
+                                    <div class="initial"><span class="badge-primary">A</span></div>
+                                    <strong class="tit">PetStore-master</strong>
+                                </div>
+                                <div class="dropdown-box">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="#">상세 정보</a></li>
+                                    </ul>
+                                </div>
+                                <p>[프로젝트 ID] 기상청 프로젝트 [프로젝트 ID] 기상청 프로젝트</p>
+                                <ul class="info">
+                                    <li><strong>등록자 :</strong> <em>홍길동</em></li>
+                                    <li><strong>토큰 발급 일시 :</strong> <em>2018-10-05 00:00</em></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list-inner">
+                                <div class="list-head">
+                                    <div class="initial"><span class="badge-primary">A</span></div>
+                                    <strong class="tit">PetStore-master</strong>
+                                </div>
+                                <div class="dropdown-box">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="#">상세 정보</a></li>
+                                    </ul>
+                                </div>
+                                <p>[프로젝트 ID] 기상청 프로젝트 [프로젝트 ID] 기상청 프로젝트</p>
+                                <ul class="info">
+                                    <li><strong>등록자 :</strong> <em>홍길동</em></li>
+                                    <li><strong>토큰 발급 일시 :</strong> <em>2018-10-05 00:00</em></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list-inner">
+                                <div class="list-head">
+                                    <div class="initial"><span class="badge-primary">A</span></div>
+                                    <strong class="tit">PetStore-master</strong>
+                                </div>
+                                <div class="dropdown-box">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="#">상세 정보</a></li>
+                                    </ul>
+                                </div>
+                                <p>[프로젝트 ID] 기상청 프로젝트 [프로젝트 ID] 기상청 프로젝트</p>
+                                <ul class="info">
+                                    <li><strong>등록자 :</strong> <em>홍길동</em></li>
+                                    <li><strong>토큰 발급 일시 :</strong> <em>2018-10-05 00:00</em></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="pagination-box">
+                        <button type="button" class="btn btn-white"><i class="fa fa-angle-double-left"></i></button>
+                        <button type="button" class="btn btn-white"><i class="fa fa-chevron-left"></i></button>
+                        <button class="btn btn-white">1</button>
+                        <button class="btn btn-white  active">2</button>
+                        <button class="btn btn-white">3</button>
+                        <button class="btn btn-white">4</button>
+                        <button type="button" class="btn btn-white"><i class="fa fa-chevron-right"></i> </button>
+                        <button type="button" class="btn btn-white"><i class="fa fa-angle-double-right"></i></button>
+                    </div>
+
+                </div>
+                <!-- //content -->
+            </div>
+            <!-- //right Cnt -->
+        </div>
+        <!-- //container -->
+    </div>
+    <!-- //wrap -->
+
+    <!-- modal 클립보드 alert -->
+    <div class="modal fade" id="alertModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">알림</h4>
+                </div>
+                <div class="modal-body">
+                    클립보드에 복사되었습니다.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //modal 클립보드 alert -->
+
+    <script type="text/javascript">
+        boxDetailCt();// 상세설명 더보기 OR 접기
+    </script>
+</body>
+</html>

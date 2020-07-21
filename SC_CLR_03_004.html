@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>eGovCp</title>
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+    <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+    <script type='text/javascript' src="js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+</head>
+
+<body>
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <header id="header">
+            <div class="inner">
+                <h1 class="logo"><a href="#"><img src="images/logo.png" alt="eGovCp"></a></h1>
+                <div class="header-top-groupt">
+                    <a class="menu-ctrl btn btn-primary" href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                    <div class="header-user dropdown">
+                        <a href="#" id="btn-my" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <span class="name">홍길동</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right" role="btn-my" aria-labelledby="btn-my">
+                            <li><a href="#"><span class="ico ico1"></span>개인정보 수정</a></li>
+                            <li><a href="#"><span class="ico ico2"></span>나의 문의내역</a></li>
+                            <li><a href="#"><span class="ico ico3"></span>문의하기</a></li>
+                            <li><a href="#"><span class="ico ico4"></span>로그아웃</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="container">
+            <!-- left Cnt -->
+            <div class="leftCnt">
+                <ul class="gnb-menu">
+                    <li><a href="" data-toggle="tooltip" data-placement="right" title="대시보드"><i class="fa fa-th-large"></i><strong>대시보드</strong></a></li>
+                    <li><a href="" data-toggle="tooltip" data-placement="right" title="API 관리"><i class="fa fa-archive"></i><strong>API 관리</strong></a></li>
+                    <li><a href="" data-toggle="tooltip" data-placement="right" title="API 배포 관리"><i class="fa fa-book"></i><strong>API 배포 관리</strong></a></li>
+                    <li>
+                        <a href="javascript:void(0);" class="on" data-toggle="tooltip" data-placement="right" title="API 현황 관리">
+                            <i class="fa fa-desktop"></i>
+                            <strong>API 현황 관리</strong>
+                            <span class="fa fa-chevron-down"></span>
+                        </a>
+                        <ul class="dept2">
+                            <li><a href="#">프로젝트 별 API 호출 현황</a></li>
+                            <li><a href="#">프로젝트 별 응답시간 현황</a></li>
+                            <li><a href="#" class="on">API 별 호출 현황</a></li>
+                            <li><a href="#">API 별 응답 코드 현황</a></li>
+                            <li><a href="#">API 별 요청/응답 Packet Size 현황</a></li>
+                            <li><a href="#">정책 적용 현황</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" data-toggle="tooltip" data-placement="right" title="API 사용 신청"><i class="fa fa-sitemap"></i><strong>API 사용 신청</strong></a></li>
+                </ul>
+            </div>
+            <!-- //left Cnt -->
+
+            <!-- right Cnt -->
+            <div class="rightCnt">
+                <!-- titWrap -->
+                <div class="titWrap">
+                    <h2 class="ctit">API 배포관리</h2>
+                    <div class="btnArea">
+                        <button type="button" name="button" class="btn-list" data-placement="bottom" data-toggle="tooltip" data-original-title="목록보기">
+                            <i class="fa fa-th-list" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" name="button" class="btn-refresh" data-placement="bottom" data-toggle="tooltip" data-original-title="새로고침">
+                            <i class="fa fa-refresh" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- //titWrap -->
+
+                <!-- content -->
+                <div class="content">
+
+                    <div class="panel pannel-box">
+                        <div class="panel-heading">
+                            <strong class="tit">API 배포 정책 등록</strong>
+                        </div>
+
+                        <div class="panel-body">
+                            <ul class="step-list">
+                                <li class="active"><div>API 배포 등록</div></li>
+                                <li class="active"><div>API 배포 자원 등록</div></li>
+                                <li class="active"><div>API 배포 정책 등록</div></li>
+                                <li><div>API 배포 결과</div></li>
+                            </ul>
+
+                            <div class="text-required">
+                                <em>*</em> 는 필수입력 사항입니다.
+                            </div>
+
+                            <div class="top-area">
+                                <div class="tit"><em class="text-danger">*</em> 정책 선택</div>
+                            </div>
+
+                            <table class="table table-striped border-top">
+                                <colgroup>
+                                    <col style="width:8%;">
+                                    <col style="width:30%;">
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">
+                                            <div class="custom-check no-t">
+                                                <input type="checkbox" id="jb-check-0">
+                                                <label for="jb-check-0">선택</label>
+                                            </div>
+                                        </th>
+                                        <th scope="col">정책 이름</th>
+                                        <th scope="col">설정 값</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="custom-check no-t">
+                                                <input type="checkbox" id="jb-check-1">
+                                                <label for="jb-check-1">선택</label>
+                                            </div>
+                                        </td>
+                                        <td class="td-l">단위 시간당 호출 차단 정책</td>
+                                        <td class="td-l">
+                                            <input type="text" class="w-xs"> 회
+                                            <span class="section"><input type="text" class="w-xs"> 초</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="custom-check no-t">
+                                                <input type="checkbox" id="jb-check-2">
+                                                <label for="jb-check-2">선택</label>
+                                            </div>
+                                        </td>
+                                        <td class="td-l">단위 시간당 무응답 호출 차단 정책</td>
+                                        <td class="td-l">
+                                            <input type="text" class="w-xs"> 회
+                                            <span class="section"><input type="text" class="w-xs"> 초</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="custom-check no-t">
+                                                <input type="checkbox" id="jb-check-3">
+                                                <label for="jb-check-3">선택</label>
+                                            </div>
+                                        </td>
+                                        <td class="td-l">단위 기간당 호출 차단 정책</td>
+                                        <td class="td-l">
+                                            <input type="text" class="w-xs"> 회
+                                            <span class="section"><input type="text" class="w-xs"> 초</span>
+                                            <strong class="tit-section">차단 유지 시간</strong>
+                                            <span class="section"><input type="text" class="w-xs"> 초</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="custom-check no-t">
+                                                <input type="checkbox" id="jb-check-4">
+                                                <label for="jb-check-4">선택</label>
+                                            </div>
+                                        </td>
+                                        <td class="td-l">단위 기간당 호출 차단 정책</td>
+                                        <td class="td-l">
+                                            <strong>적용 시작일</strong>
+                                            <span class="data-picker section">
+                                                <input type="text" class="datepicker" value="2019.04.01">
+                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="section"><input type="text" class="w-xs"> 회</span>
+                                            <span class="section"><input type="text" class="w-xs"></span>
+                                            <span class="section">
+                                                <select>
+                                                    <option value="0">개월</option>
+                                                </select>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="custom-check no-t">
+                                                <input type="checkbox" id="jb-check-5">
+                                                <label for="jb-check-5">선택</label>
+                                            </div>
+                                        </td>
+                                        <td class="td-l">IP 차단 정책</td>
+                                        <td class="td-l">
+                                            <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-xs">IP 차단 관리</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="btn-area">
+								<button type="button" class="btn btn-primary">이전</button>
+								<button type="button" class="btn btn-default">설정 종료</button>
+								<button type="button" class="btn btn-primary">배포</button>
+							</div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- //content -->
+            </div>
+            <!-- //right Cnt -->
+        </div>
+        <!-- //container -->
+    </div>
+    <!-- //wrap -->
+
+    <!-- modal IP 차단 관리 팝업 -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">IP 차단 관리</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-6 form-group">
+                            <strong class="tit"><label for="tmpInput01">프로젝트 ID</label></strong>
+                            <div class="cont"><input id="tmpInput01" class="form-control" type="text"></div>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 form-group">
+                            <strong class="tit"><label for="tmpInput02">프로젝트 명</label></strong>
+                            <div class="cont"><input id="tmpInput02" class="form-control" type="text"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-6 form-group">
+                            <strong class="tit"><label for="tmpInput03">IP 정보</label></strong>
+                            <div class="cont"><input id="tmpInput03" class="form-control" type="text"></div>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 form-group">
+                            <strong class="tit"><label for="tmpInput04">비고</label></strong>
+                            <div class="cont"><input id="tmpInput04" class="form-control" type="text"></div>
+                        </div>
+                    </div>
+
+                    <table class="table table-striped border-top">
+                        <colgroup>
+                            <col style="width:8%;">
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">프로젝트명</th>
+                                <th scope="col">차단 IP</th>
+                                <th scope="col">설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="custom-check no-t">
+                                        <input type="checkbox" id="jb-check-01">
+                                        <label for="jb-check-01">선택</label>
+                                    </div>
+                                </td>
+                                <td>A 프로젝트</td>
+                                <td>10.10.1.1</td>
+                                <td>IP 차단 사유 설명</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-check no-t">
+                                        <input type="checkbox" id="jb-check-02">
+                                        <label for="jb-check-02">선택</label>
+                                    </div>
+                                </td>
+                                <td>A 프로젝트</td>
+                                <td>10.10.1.1</td>
+                                <td>IP 차단 사유 설명</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-check no-t">
+                                        <input type="checkbox" id="jb-check-03">
+                                        <label for="jb-check-03">선택</label>
+                                    </div>
+                                </td>
+                                <td>A 프로젝트</td>
+                                <td>10.10.1.1</td>
+                                <td>IP 차단 사유 설명</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">저장</button>
+                    <button type="button" class="btn btn-default">삭제</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //modal IP 차단 관리 팝업 -->
+</body>
+</html>

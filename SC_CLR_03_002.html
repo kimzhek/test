@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>eGovCp</title>
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+    <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+    <script type='text/javascript' src="js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+</head>
+
+<body>
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <header id="header">
+            <div class="inner">
+                <h1 class="logo"><a href="#"><img src="images/logo.png" alt="eGovCp"></a></h1>
+                <div class="header-top-groupt">
+                    <a class="menu-ctrl btn btn-primary" href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                    <div class="header-user dropdown">
+                        <a href="#" id="btn-my" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <span class="name">홍길동</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right" role="btn-my" aria-labelledby="btn-my">
+                            <li><a href="#"><span class="ico ico1"></span>개인정보 수정</a></li>
+                            <li><a href="#"><span class="ico ico2"></span>나의 문의내역</a></li>
+                            <li><a href="#"><span class="ico ico3"></span>문의하기</a></li>
+                            <li><a href="#"><span class="ico ico4"></span>로그아웃</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="container">
+            <!-- left Cnt -->
+            <div class="leftCnt">
+                <ul class="gnb-menu">
+                    <li><a href="" data-toggle="tooltip" data-placement="right" title="대시보드"><i class="fa fa-th-large"></i><strong>대시보드</strong></a></li>
+                    <li><a href="" data-toggle="tooltip" data-placement="right" title="API 관리"><i class="fa fa-archive"></i><strong>API 관리</strong></a></li>
+                    <li><a href="" data-toggle="tooltip" data-placement="right" title="API 배포 관리"><i class="fa fa-book"></i><strong>API 배포 관리</strong></a></li>
+                    <li>
+                        <a href="javascript:void(0);" class="on" data-toggle="tooltip" data-placement="right" title="API 현황 관리">
+                            <i class="fa fa-desktop"></i>
+                            <strong>API 현황 관리</strong>
+                            <span class="fa fa-chevron-down"></span>
+                        </a>
+                        <ul class="dept2">
+                            <li><a href="#">프로젝트 별 API 호출 현황</a></li>
+                            <li><a href="#">프로젝트 별 응답시간 현황</a></li>
+                            <li><a href="#" class="on">API 별 호출 현황</a></li>
+                            <li><a href="#">API 별 응답 코드 현황</a></li>
+                            <li><a href="#">API 별 요청/응답 Packet Size 현황</a></li>
+                            <li><a href="#">정책 적용 현황</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" data-toggle="tooltip" data-placement="right" title="API 사용 신청"><i class="fa fa-sitemap"></i><strong>API 사용 신청</strong></a></li>
+                </ul>
+            </div>
+            <!-- //left Cnt -->
+
+            <!-- right Cnt -->
+            <div class="rightCnt">
+                <!-- titWrap -->
+                <div class="titWrap">
+                    <h2 class="ctit">API 배포관리</h2>
+                    <div class="btnArea">
+                        <button type="button" name="button" class="btn-list" data-placement="bottom" data-toggle="tooltip" data-original-title="목록보기">
+                            <i class="fa fa-th-list" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" name="button" class="btn-refresh" data-placement="bottom" data-toggle="tooltip" data-original-title="새로고침">
+                            <i class="fa fa-refresh" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- //titWrap -->
+
+                <!-- content -->
+                <div class="content">
+
+                    <div class="panel pannel-box">
+                        <div class="panel-heading">
+                            <strong class="tit">API 배포 등록</strong>
+                        </div>
+
+                        <div class="panel-body">
+                            <ul class="step-list">
+                                <li class="active"><div>API 배포 등록</div></li>
+                                <li><div>API 배포 자원 등록</div></li>
+                                <li><div>API 배포 정책 등록</div></li>
+                                <li><div>API 배포 결과</div></li>
+                            </ul>
+
+                            <div class="text-required">
+                                <em>*</em> 는 필수입력 사항입니다.
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6 col-xs-6 form-group">
+                                    <strong class="tit"><label for="tmpInput01">서비스 ID</label></strong>
+                                    <div class="cont"><input id="tmpInput01" class="form-control" type="text" placeholder="프로젝트 ID를 입력하세요." value="pet-store" readonly></div>
+                                </div>
+                                <div class="col-sm-6 col-xs-6 form-group">
+                                    <strong class="tit"><label for="tmpInput02">API 호출 URI</label></strong>
+                                    <div class="cont"><input id="tmpInput02" class="form-control" type="text" placeholder="프로젝트 이름을 입력하세요." value="pet-store" readonly></div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12 form-group">
+                                    <strong class="tit"><label for="tmptextarea01"><em class="text-danger">*</em> API 배포 설명</label></strong>
+                                    <div class="cont">
+                                        <textarea name="tmptextarea01" id="tmptextarea01" cols="30" rows="5" placeholder="API를 이해할 수 있는 설명을 입력해 주세요."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12 form-group">
+                                    <strong class="tit"><em class="text-danger">*</em> 공개 범위</strong>
+                                    <div class="cont">
+                                        <div class="custom-box">
+                                            <div class="get">
+                                                <input type="checkbox" id="limit01" checked>
+                                                <label for="limit01"><strong>GET</strong></label>
+                                            </div>
+                                            <div class="post">
+                                                <input type="checkbox" id="limit02">
+                                                <label for="limit02"><strong>POST</strong></label>
+                                            </div>
+                                            <div class="put">
+                                                <input type="checkbox" id="limit03">
+                                                <label for="limit03"><strong>PUT</strong></label>
+                                            </div>
+                                            <div class="delete">
+                                                <input type="checkbox" id="limit04">
+                                                <label for="limit04"><strong>DELETE</strong></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12 form-group">
+                                    <strong class="tit"><label for="tmpInput03"><em class="text-danger">*</em> 직접 URI 입력</label></strong>
+                                    <div class="cont has-error">
+                                        <input id="tmpInput03" class="form-control" type="text" placeholder="URI를 입력해 주세요.">
+                                        <p class="text-error">URI를 입력해 주세요.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12 form-group">
+                                    <strong class="tit"><label for="tmpInput04"><em class="text-danger">*</em> 외부 API 호출 URI 입력</label></strong>
+                                    <div class="cont"><input id="tmpInput04" class="form-control" type="text" placeholder="URI를 입력해 주세요."></div>
+                                </div>
+                            </div>
+
+                            <div class="btn-area">
+								<button type="button" class="btn btn-default">설정 종료</button>
+								<button type="button" class="btn btn-primary">다음</button>
+							</div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- //content -->
+            </div>
+            <!-- //right Cnt -->
+        </div>
+        <!-- //container -->
+    </div>
+    <!-- //wrap -->
+</body>
+</html>

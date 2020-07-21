@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>eGovCp</title>
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+    <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+    <script type='text/javascript' src="js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+</head>
+
+<body>
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <header id="header">
+            <div class="inner">
+                <h1 class="logo"><a href="#"><img src="images/logo.png" alt="eGovCp"></a></h1>
+                <div class="header-top-groupt">
+                    <a class="menu-ctrl btn btn-primary" href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                    <div class="header-user dropdown">
+                        <a href="#" id="btn-my" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <span class="name">홍길동</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right" role="btn-my" aria-labelledby="btn-my">
+                            <li><a href="#"><span class="ico ico1"></span>개인정보 수정</a></li>
+                            <li><a href="#"><span class="ico ico2"></span>나의 문의내역</a></li>
+                            <li><a href="#"><span class="ico ico3"></span>문의하기</a></li>
+                            <li><a href="#"><span class="ico ico4"></span>로그아웃</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="container">
+            <!-- left Cnt -->
+            <div class="leftCnt">
+                <ul class="gnb-menu">
+                    <li><a href="" data-toggle="tooltip" data-placement="right" title="대시보드"><i class="fa fa-th-large"></i><strong>대시보드</strong></a></li>
+                    <li><a href="" data-toggle="tooltip" data-placement="right" title="API 관리"><i class="fa fa-archive"></i><strong>API 관리</strong></a></li>
+                    <li><a href="" data-toggle="tooltip" data-placement="right" title="API 배포 관리"><i class="fa fa-book"></i><strong>API 배포 관리</strong></a></li>
+                    <li>
+                        <a href="javascript:void(0);" class="on" data-toggle="tooltip" data-placement="right" title="API 현황 관리">
+                            <i class="fa fa-desktop"></i>
+                            <strong>API 현황 관리</strong>
+                            <span class="fa fa-chevron-down"></span>
+                        </a>
+                        <ul class="dept2">
+                            <li><a href="#">프로젝트 별 API 호출 현황</a></li>
+                            <li><a href="#">프로젝트 별 응답시간 현황</a></li>
+                            <li><a href="#" class="on">API 별 호출 현황</a></li>
+                            <li><a href="#">API 별 응답 코드 현황</a></li>
+                            <li><a href="#">API 별 요청/응답 Packet Size 현황</a></li>
+                            <li><a href="#">정책 적용 현황</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" data-toggle="tooltip" data-placement="right" title="API 사용 신청"><i class="fa fa-sitemap"></i><strong>API 사용 신청</strong></a></li>
+                </ul>
+            </div>
+            <!-- //left Cnt -->
+
+            <!-- right Cnt -->
+            <div class="rightCnt">
+                <!-- titWrap -->
+                <div class="titWrap">
+                    <h2 class="ctit">API 관리</h2>
+                    <div class="btnArea">
+                        <button type="button" name="button" class="btn-list" data-placement="bottom" data-toggle="tooltip" data-original-title="목록보기">
+                            <i class="fa fa-th-list" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" name="button" class="btn-refresh" data-placement="bottom" data-toggle="tooltip" data-original-title="새로고침">
+                            <i class="fa fa-refresh" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- //titWrap -->
+
+                <!-- content -->
+                <div class="content">
+
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">API 등록</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">API 수정</button>
+
+                </div>
+                <!-- //content -->
+            </div>
+            <!-- //right Cnt -->
+        </div>
+        <!-- //container -->
+    </div>
+    <!-- //wrap -->
+
+    <!-- modal API 명세 등록 팝업 -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">API 명세 등록</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="text-required">
+                        <em>*</em> 는 필수입력 사항입니다.
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-6 form-group">
+                            <strong class="tit"><label for="tmpSelect01"><em class="text-danger">*</em> API 등록 구분</label></strong>
+                            <div class="cont">
+                                <select id="tmpSelect01">
+                                    <option value="0">플랫폼 API</option>
+                                    <option value="1">민간 외부 API</option>
+                                    <option value="2">공공 외부 API</option>
+                                    <option value="3">프로젝트 내부 API</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 form-group">
+                            <strong class="tit"><label for="tmpRadio01">API 공개 여부</label></strong>
+                            <div class="cont">
+                                <span class="custom-radio">
+                                    <input type="radio" id="tmpRadio01" name="tmpRadioGroup01" checked>
+                                    <label for="tmpRadio01">공개</label>
+                                </span>
+                                <span class="custom-radio">
+                                    <input type="radio" id="tmpRadio02" name="tmpRadioGroup01">
+                                    <label for="tmpRadio02">비공개</label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-6 form-group">
+                            <strong class="tit"><label for="tmpInput01"><em class="text-danger">*</em> 프로젝트 ID</label></strong>
+                            <div class="cont"><input id="tmpInput01" class="form-control" type="text" placeholder="프로젝트 ID를 입력하세요." value="PRJT000000001" readonly></div>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 form-group">
+                            <strong class="tit"><label for="tmpInput02"><em class="text-danger">*</em> 프로젝트 이름</label></strong>
+                            <div class="cont"><input id="tmpInput02" class="form-control" type="text" placeholder="프로젝트 이름을 입력하세요." value="전자정보 클라우드 프로젝트" readonly></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-6 form-group">
+                            <strong class="tit"><label for="tmpInput03"><em class="text-danger">*</em> API 이름</label></strong>
+                            <div class="cont has-error">
+                                <input id="tmpInput03" class="form-control" type="text" placeholder="API 이름을 입력하세요.">
+                                <p class="text-error">API 이름을 입력하세요.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 form-group">
+                            <strong class="tit"><label for="tmpInput04"><em class="text-danger">*</em> API ID</label></strong>
+                            <div class="cont">
+                                <input id="tmpInput04" class="form-control" type="text" placeholder="API ID를 입력하세요. 영문 소문자, 하이픈(-)만 입력 가능합니다.">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <strong class="tit"><label for="tmpInfor"><em class="text-danger">*</em> 명세정보</label></strong>
+                            <div class="cont">
+                                <div id="tmpInfor" style="width:100%; height:200px; background:#333">명세정보</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">확인</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //modal API 명세 등록 팝업 -->
+
+    <!-- modal API 명세 수정 팝업 -->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">API 명세 수정</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="text-required">
+                        <em>*</em> 는 필수입력 사항입니다.
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-6 form-group">
+                            <strong class="tit"><label for="tmpSelect01"><em class="text-danger">*</em> API 등록 구분</label></strong>
+                            <div class="cont">
+                                <select id="tmpSelect01" disabled>
+                                    <option value="0">플랫폼 API</option>
+                                    <option value="1">민간 외부 API</option>
+                                    <option value="2">공공 외부 API</option>
+                                    <option value="3">프로젝트 내부 API</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-6 form-group">
+                            <strong class="tit"><label for="tmpInput01"><em class="text-danger">*</em> 프로젝트 ID</label></strong>
+                            <div class="cont"><input id="tmpInput01" class="form-control" type="text" placeholder="프로젝트 ID를 입력하세요." value="PRJT000000001" readonly></div>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 form-group">
+                            <strong class="tit"><label for="tmpInput02"><em class="text-danger">*</em> 프로젝트 이름</label></strong>
+                            <div class="cont"><input id="tmpInput02" class="form-control" type="text" placeholder="프로젝트 이름을 입력하세요." value="전자정보 클라우드 프로젝트" readonly></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-6 form-group">
+                            <strong class="tit"><label for="tmpInput03"><em class="text-danger">*</em> API 이름</label></strong>
+                            <div class="cont">
+                                <input id="tmpInput03" class="form-control" type="text" value="날씨정보 조회" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 form-group">
+                            <strong class="tit"><label for="tmpInput04"><em class="text-danger">*</em> API ID</label></strong>
+                            <div class="cont">
+                                <input id="tmpInput04" class="form-control" type="text" value="API_0001" readonly>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <strong class="tit"><label for="tmpInfor"><em class="text-danger">*</em> 명세정보</label></strong>
+                            <div class="cont">
+                                <div id="tmpInfor" style="width:100%; height:200px; background:#333">명세정보</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">확인</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //modal API 명세 수정 팝업 -->
+</body>
+</html>
